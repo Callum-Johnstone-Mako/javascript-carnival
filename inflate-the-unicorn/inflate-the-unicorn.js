@@ -5,8 +5,6 @@
 console.log('Inflate The Unicorn!')
 
 let unicorns = document.getElementsByClassName('inflate-an-image')
-//console.log(unicorns)
-console.log(unicorns)
 
 for (i = 0; i < unicorns.length; i++) {
   unicorns[i].onclick = inflate
@@ -14,7 +12,7 @@ for (i = 0; i < unicorns.length; i++) {
 
 function inflate(e) {
   let unicorn = e.target
-
+  //Logic for game
   if (unicorn.src.match('./images/unicorn-0.png')) {
     unicorn.src = './images/unicorn-1.png'
   } else if (unicorn.src.match('./images/unicorn-1.png')) {
@@ -22,6 +20,7 @@ function inflate(e) {
   } else if (unicorn.src.match('./images/unicorn-2.png')) {
     unicorn.src = './images/unicorn-3.png'
   } else if (unicorn.src.match('./images/unicorn-3.png')) {
+    //Logic for displaying which unicorn is inflated fully
     if (unicorn.id.match('Unicorn1')) {
       alert('unicorn1 says Thank You!')
     }
@@ -32,6 +31,4 @@ function inflate(e) {
       alert('unicorn3 says Thank You!')
     }
   }
-
-  console.log(unicorns)
 }
